@@ -29,7 +29,7 @@ $cc = $stmt_c->fetchAll();
 
 
 <body>
-    <h2>แก้ไขมูลลูกค้าเข้าฐานข้อมูล1<h2>
+    <h2>แก้ไขข้อมูลลูกค้าเข้าฐานข้อมูล1<h2>
             <form action="updateCustomerDB.php" method="POST">
                 <form>
                     <label>รหัสลูกค้า: </label>
