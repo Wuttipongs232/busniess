@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12"> <br>
-                <h3>รายชื่อลูกค้า <a href="addCustomer.php" class="btn btn-info float-end">+เพิ่มข้อมูล</a> </h3>
+                <h3>รายชื่อลูกค้า <a href="addcustomerdropdown.php" class="btn btn-info float-end">+เพิ่มข้อมูล</a> </h3>
                 <table class="table table-striped  table-hover table-responsive table-bordered">
                     <thead align="center">
                         <tr>
@@ -33,10 +33,10 @@
                         //https://pad.riseup.net/p/np-db-keep
 
 
-                        $sql = "SELECT customer.CustomerID,customer.Name,customer.Birthdate,customer.Email,country.CountryName,customer.OutstandingDebt from customer join country on customer.CountryCode = country.CountryCode;";
+                        $sql = "SELECT customer.CustomerID,customer.Name,customer.Birthdate,customer.Email,country.CountryName,customer.OutstandingDebt from customer    join country on customer.CountryCode = country.CountryCode;";
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
-                        $result = $stmt->setfetchMode(PDO::FETCH_ASSOC);
+                        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                         foreach ($result as $r) { ?>
                             <tr>
