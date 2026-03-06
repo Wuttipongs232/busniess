@@ -19,6 +19,9 @@ $stmt->execute();
             </th>
             <th width="140">
                 <div align="center">ชื่อ</div>
+                </div>
+                </div>
+                </div>
             </th>
             <th width="120">
                 <div align="center">วันเกิด</div>
